@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.homes.ui.home.MapFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.homes.ui.search.SearchFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.homes.ui.slideshow.FavoritesFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.example.homes.ui.tools.MyHomesFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_myhomes" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.homes.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/nav_add"
+        android:name="com.example.homes.ui.send.AddFragment"
+        android:label="@string/menu_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.example.homes.ui.send.HelpFragment"
+        android:label="@string/menu_help"
+        tools:layout="@layout/fragment_help" />
+
+</navigation>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/transacao"
+            android:layout_width="320dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tipoTransacao" />
+
+        <TextView
+            android:id="@+id/tipoImovel"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:text="Escolha o tipo do imóvel "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transacao" />
+
+
+        <EditText
+            android:id="@+id/txt_phone"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="Ex: 929652-4296"
+            android:inputType="number"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+        <EditText
+            android:id="@+id/txt_price"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:maxLength="10"
+            android:hint="Ex: 150.00"
+            android:inputType="numberDecimal"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="320dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:text="Telefone para contato"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:text="Preço do Imóvel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_phone" />
+
+        <TextView
+            android:id="@+id/tipoTransacao"
+            android:layout_width="320dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="Escolha o tipo da transação "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="425dp"
+                android:layout_height="50dp"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Editar Imóvel"
+                app:titleTextAppearance="@style/login" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_price">
+
+            <EditText
+                android:id="@+id/txt_complement2"
+                android:layout_width="320dp"
+                android:layout_height="38dp"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:hint="361"
+                android:inputType="text"
+                android:maxLength="4"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/complement2" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:text="Endereço"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_cep" />
+
+            <EditText
+                android:id="@+id/txt_address"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:maxLength="65"
+                android:hint="Avenida Itacoatiara"
+                android:inputType="text"
+                android:textColor="#000000"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address" />
+
+            <TextView
+                android:id="@+id/cep"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="Digite o CEP do imóvel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/txt_cep"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:hint="Ex: 14028-180"
+                android:inputType="phone"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cep" />
+
+            <TextView
+                android:id="@+id/complement"
+                android:layout_width="320dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:text="Complemento"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_complement2" />
+
+            <TextView
+                android:id="@+id/complement2"
+                android:layout_width="320dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:text="Número"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_address" />
+
+            <EditText
+                android:id="@+id/txt_complement"
+                android:layout_width="320dp"
+                android:layout_height="38dp"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:hint="Apartamento 4"
+                android:inputType="text"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/complement" />
+
+            <TextView
+                android:id="@+id/burgh"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Bairro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_complement" />
+
+            <EditText
+                android:id="@+id/txt_burgh"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:hint="Ex: Cachoeirinha"
+                android:inputType="text"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/burgh" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:text="Descrição do imóvel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_burgh" />
+
+            <EditText
+                android:id="@+id/txt_description"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:maxLength="250"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:hint="Ex: Possui 3 quartos, 2 banheiros, área de serviço ..."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description" />
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="144dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button"
+                android:text="Atualizar"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_description" />
+
+            <TextView
+                android:id="@+id/skipP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:text="Excluir "
+                android:textAppearance="@style/registrar"
+                android:textColor="#E20B0B"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/next_button"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/pesquisar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_cep"
+                app:layout_constraintEnd_toEndOf="@+id/txt_cep"
+                app:layout_constraintTop_toTopOf="@+id/txt_cep"
+                app:layout_constraintVertical_bias="0.333"
+                app:srcCompat="@drawable/ic_menu_search" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ir.apend.slider.ui.Slider
+            android:id="@+id/image"
+            android:layout_width="426dp"
+            android:layout_height="179dp"
+            app:animateIndicators="true"
+            app:defaultIndicators="circle"
+            android:background="@drawable/teste"
+            app:indicatorSize="8dp"
+            app:intervalSecond="5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:loopSlides="true">
+
+        </ir.apend.slider.ui.Slider>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="320dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tipoImovel" />
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="76dp"
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="@+id/image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:srcCompat="@drawable/ic_add" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
